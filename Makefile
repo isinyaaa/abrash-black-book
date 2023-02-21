@@ -2,7 +2,11 @@ FILES := $(shell cat filelist.txt)
 
 .PHONY: html epub
 
-all: html epub mobi
+all: html pdf epub mobi
+
+pdf: html
+	rm -rf out/black-book.pdf
+	pandoc -o out/black-book.pdf --section-divs --pdf-engine=xelatex --toc out/html/black-book.html
 
 html:
 	rm -rf out/html && mkdir -p out/html

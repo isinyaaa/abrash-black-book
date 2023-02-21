@@ -25,6 +25,7 @@ Some larger changes could be made to improve the content. I'd love to see some o
 You need to have the following software installed and on your `PATH` before you begin:
 
   * [pandoc](http://johnmacfarlane.net/pandoc/) version 2.0 or greater for Markdown to HTML and EPUB conversion.
+  * [xelatex](https://pandoc.org/MANUAL.html#creating-a-pdf) (available through [texlive](https://www.tug.org/texlive/)) for HTML to PDF conversion.
   * [kindlegen](http://www.amazon.com/gp/feature.html?docId=1000765211) for Epub to Mobi conversion.
 
 To generate an e-reader friendly version of the book, you can use `make` with one of the following options:
@@ -32,6 +33,7 @@ To generate an e-reader friendly version of the book, you can use `make` with on
   * `html` - build an HTML5 single-page version of the book
   * `epub` - build an EPUB3 ebook
   * `mobi` - build a Kindle-friendly Mobi
+  * `pdf`  - build a PDF version of the book
   * `all`  - do all of the above
 
 Once complete, there will be an `out` directory with a `black-book.epub`, a `black-book.mobi` and an `html` directory with a `black-book.html` file.
